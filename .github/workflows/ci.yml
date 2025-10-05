@@ -21,6 +21,7 @@ jobs:
     - name: update dependencies
       run: poetry lock
     - name: Install dependencies
-      run: poetry install
+      run:  poetry install --no-root
+
     - name: Run tests
       run: poetry run pytest
